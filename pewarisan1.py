@@ -1,0 +1,67 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM7FO+E9nzwGIylzh7puKhO",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/uswatl/praktikum_PBO_UswatulHasanah-/blob/main/pewarisan1.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6FWYdIB1nrur"
+      },
+      "outputs": [],
+      "source": [
+        "class A:\n",
+        " def _init_(self):\n",
+        "   self ._a = 0\n",
+        " def setA(self, a):\n",
+        "   self ._a = a\n",
+        " def getA(self):\n",
+        "   return self._a\n",
+        "\n",
+        "#mendefinisikan kelas anak\n",
+        "class B(A):\n",
+        " def _init_(self):\n",
+        "   self ._b = 0\n",
+        " def setB(self, b):\n",
+        "   self ._b = b\n",
+        " def getB(self):\n",
+        "   return self._b\n",
+        "\n",
+        "#membuat objek\n",
+        "obj = B()\n",
+        "\n",
+        "#memanggil method milik kelas induk\n",
+        "obj.setA(10)\n",
+        "print(\"Nilai a: %d\" % obj.getA())\n",
+        "\n",
+        "#memanggil method milik dirinya sendiri\n",
+        "obj.setB(20)\n",
+        "print(\"Nilai b: %d\" % obj.getB())"
+      ]
+    }
+  ]
+}
